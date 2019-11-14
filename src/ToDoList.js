@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import TodoItem from './TodoItem'; 
 
 export class ToDoList extends Component {
-  constructor(props){
-    super(props);
-  }
+
   render() {
     return (
       <ul style={{border: '2px solid red'}}>

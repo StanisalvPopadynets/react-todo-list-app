@@ -5,6 +5,8 @@ import './App.css';
 
 class App extends React.Component {
   
+  idHolder = 3;
+
   constructor() {
     super();
     this.state = {
@@ -16,11 +18,19 @@ class App extends React.Component {
     }
   }
 
+  onAddItem = (label) => {
+    this.setState(prevState => {
+      return {
+        todos: [...prevState.todos, {label, id: ++this.idHolder}]
+      }
+    });
+  }
+
   render() {  
     return (
       <div className="App">
         <ToDoList todos={this.state.todos} />
-        <Input />
+        <Input onAddItem={this.onAddItem} />
       </div>
     );
   }
