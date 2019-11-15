@@ -26,10 +26,21 @@ class App extends React.Component {
     });
   }
 
+  onDelete = (id) => {
+    this.setState(prevState => {
+      const newTodos = prevState.todos.filter(todo => {
+        return id !== todo.id;
+      });
+      return {
+        todos: newTodos
+      }
+    });
+  }
+
   render() {  
     return (
       <div className="App">
-        <ToDoList todos={this.state.todos} />
+        <ToDoList todos={this.state.todos} onDelete={this.onDelete} />
         <Input onAddItem={this.onAddItem} />
       </div>
     );

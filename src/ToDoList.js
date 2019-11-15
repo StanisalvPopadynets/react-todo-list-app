@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TodoItem from './TodoItem'; 
 
-export class ToDoList extends Component {
-
-  render() {
-    return (
-      <ul style={{border: '2px solid red'}}>
-        {
-          this.props.todos.map(todo => {
-            return <li key={todo.id}>
-              <TodoItem label={todo.label} />
-            </li>
-          })
-        }
-      </ul>
-    )
-  }
+const ToDoList = (props) => {
+  return (
+    <ul style={{border: '2px solid red'}}>
+      {
+        props.todos.map(todo => {
+          return <li key={todo.id}>
+            <TodoItem label={todo.label} onDelete={() => props.onDelete(todo.id)} />
+          </li>
+        })
+      }
+    </ul>
+  )
 }
+
 
 export default ToDoList
