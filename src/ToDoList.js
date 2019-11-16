@@ -1,12 +1,13 @@
 import React from 'react';
 import TodoItem from './TodoItem'; 
+import styles from './ToDoList.module.css';
 
 const ToDoList = (props) => {
   return (
-    <ul style={{border: '2px solid red'}}>
+    <ul className={styles.list}>
       {
         props.todos.map(todo => {
-          return <li key={todo.id}>
+          return <li className={styles.item} key={todo.id}>
             <TodoItem label={todo.label} onDelete={() => props.onDelete(todo.id)} />
           </li>
         })

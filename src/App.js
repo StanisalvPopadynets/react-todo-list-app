@@ -1,7 +1,7 @@
 import React from 'react';
 import ToDoList from './ToDoList';
 import Input from './Input';
-import './App.css';
+import styles from './App.module.css';
 
 class App extends React.Component {
   
@@ -39,7 +39,8 @@ class App extends React.Component {
 
   render() {  
     return (
-      <div className="App">
+      <div className={styles.App}>
+        <h1>Todo List App</h1>
         <ToDoList todos={this.state.todos} onDelete={this.onDelete} />
         <Input onAddItem={this.onAddItem} />
       </div>

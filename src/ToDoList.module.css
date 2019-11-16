@@ -1,0 +1,13 @@
+.list {
+  border: 1px solid #696969;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.item {
+  padding: 5px;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid #696969;
+}

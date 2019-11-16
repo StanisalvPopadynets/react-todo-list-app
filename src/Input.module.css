@@ -1,0 +1,35 @@
+.add-item-input {
+  display: flex;
+  justify-content: center;
+}
+
+.input_text {
+  display: block;
+  margin: 0;
+  padding: .8rem .8rem;
+  color: inherit;
+  width: 60%;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+.input-text::placeholder {
+  color: #B0BEC5;
+}
+
+.add_button {
+  border: 1px solid gray;
+
+  border-radius: 2px;
+  padding: 5px;
+  margin-left: 5px;
+  height: min-content;
+  align-self: center;
+  transition: box-shadow ease 0.2s;
+}
+
+.add_button:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

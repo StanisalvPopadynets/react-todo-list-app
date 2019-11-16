@@ -1,0 +1,18 @@
+.item__content {
+  display: flex;
+  justify-items: center;
+}
+
+.button_delete {
+  border: 1px solid gray;
+
+  color: red;
+  border-radius: 2px;
+  padding: 2px;
+  margin-left: auto;
+  transition: box-shadow ease 0.2s;
+}
+
+.button_delete:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
